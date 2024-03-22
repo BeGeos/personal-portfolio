@@ -1,0 +1,156 @@
+
+:root {
+    /* Dark */
+    --clr-bg-primary__dark: hsl(222, 47%, 11%);
+    --clr-bg-primary-highlight__dark: hsla(217, 33%, 17%, 50%);
+    --clr-bg-secondary__dark: hsl(172, 66%, 50%);
+    --clr-bg-accent-muted__dark: hsla(172, 66%, 50%, 10%);
+    --clr-text-primary-200__dark: hsl(214, 32%, 91%);
+    --clr-text-primary-300__dark: hsl(213, 27%, 84%);
+    --clr-text-primary-500__dark: hsl(215, 16%, 47%);
+    --clr-text-accent__dark: hsl(171, 77%, 64%);
+    --clr-text-danger__dark: hsl(0, 84%, 60%);
+    --clr-bg-highlight__dark: rgba(29, 78, 216, 0.15);
+
+    /* Light */
+    --clr-bg-primary__light: hsl(0, 0%, 100%);
+    --clr-bg-primary-highlight__light: hsl(210, 40%, 96%);
+    --clr-bg-secondary__light: hsl(172, 66%, 50%);
+    --clr-bg-accent-muted__light: hsla(198, 93%, 60%, 10%);
+    --clr-text-primary-200__light: hsl(222, 47%, 11%);
+    --clr-text-primary-300__light: hsl(217, 33%, 17%);
+    --clr-text-primary-500__light: hsl(215, 20%, 65%);
+    --clr-text-accent__light: hsl(200, 98%, 39%);
+    --clr-text-danger__light: hsl(0, 84%, 60%);
+    --clr-bg-highlight__light: rgba(255, 255, 255);
+
+    /* Pancake */
+    --clr-bg-primary__pancake: hsl(53, 98%, 77%);
+    --clr-bg-primary-highlight__pancake: hsl(55, 97%, 88%);
+    --clr-bg-secondary__pancake: hsl(291, 93%, 83%);
+    --clr-bg-accent-muted__pancake: hsla(293, 69%, 49%, 10%);
+    --clr-text-primary-200__pancake: hsl(22, 78%, 26%);
+    --clr-text-primary-300__pancake: hsl(26, 90%, 37%);
+    --clr-text-primary-500__pancake: hsl(38, 92%, 50%);
+    --clr-text-accent__pancake: hsl(292, 84%, 61%);
+    --clr-text-danger__pancake: hsl(0, 84%, 60%);
+    --clr-bg-highlight__pancake: hsla(292, 84%, 61%, 15%);;
+
+    /* Barbie */
+    --clr-bg-primary__barbie: hsl(288, 96%, 91%);
+    --clr-bg-primary-highlight__barbie: hsl(291, 93%, 83%);
+    --clr-bg-secondary__barbie: hsl(187, 92%, 69%);
+    --clr-bg-accent-muted__barbie: hsla(188, 86%, 53%, 10%);
+    --clr-text-primary-200__barbie: hsl(53, 98%, 77%);
+    --clr-text-primary-300__barbie: hsl(50, 98%, 64%);
+    --clr-text-primary-500__barbie: hsl(197, 87%, 55%);
+    --clr-text-accent__barbie: hsl(188, 86%, 53%);
+    --clr-text-danger__barbie: hsl(0, 84%, 60%);
+    --clr-bg-highlight__barbie: hsla(288, 62%, 49%, 15%);
+
+    /* Darcula */
+    --clr-bg-primary__darcula: hsl(0, 0%, 9%);
+    --clr-bg-primary-highlight__darcula: hsl(0, 0%, 25%);
+    --clr-bg-secondary__darcula: hsl(292, 84%, 61%);
+    --clr-bg-accent-muted__darcula: hsla(188, 86%, 53%, 10%);
+    --clr-text-primary-200__darcula: hsl(0, 91%, 71%);
+    --clr-text-primary-300__darcula: hsl(0, 84%, 60%);
+    --clr-text-primary-500__darcula: hsl(53, 98%, 77%);
+    --clr-text-accent__darcula: hsl(188, 86%, 53%);
+    --clr-text-danger__darcula: hsl(0, 84%, 60%);
+    --clr-bg-highlight__darcula: hsla(0, 0%, 39%, 0.15);
+
+    /* Default */
+    --clr-bg-primary: var(--clr-bg-primary__dark);
+    --clr-bg-primary-highlight: var(--clr-bg-primary-highlight__dark);
+    --clr-bg-secondary: var(--clr-bg-secondary__dark);
+    --clr-bg-accent-muted: var(--clr-bg-accent-muted__dark);
+    --clr-text-primary-200: var(--clr-text-primary-200__dark);
+    --clr-text-primary-300: var(--clr-text-primary-300__dark);
+    --clr-text-primary-500: var(--clr-text-primary-500__dark);
+    --clr-text-accent: var(--clr-text-accent__dark);
+    --clr-text-danger: var(--clr-text-danger__dark);
+    --clr-bg-highlight: var(--clr-bg-highlight__dark)
+}
+
+html {
+    font-size: 16px; 
+}
+
+html[data-theme='light'] {
+    --clr-bg-primary: var(--clr-bg-primary__light);
+    --clr-bg-primary-highlight: var(--clr-bg-primary-highlight__light);
+    --clr-bg-secondary: var(--clr-bg-secondary__light);
+    --clr-bg-accent-muted: var(--clr-bg-accent-muted__light);
+    --clr-text-primary-200: var(--clr-text-primary-200__light);
+    --clr-text-primary-300: var(--clr-text-primary-300__light);
+    --clr-text-primary-500: var(--clr-text-primary-500__light);
+    --clr-text-accent: var(--clr-text-accent__light);
+    --clr-text-danger: var(--clr-text-danger__light);
+    --clr-bg-highlight: var(--clr-bg-highlight__light)
+}
+html[data-theme='pancake'] {
+    --clr-bg-primary: var(--clr-bg-primary__pancake);
+    --clr-bg-primary-highlight: var(--clr-bg-primary-highlight__pancake);
+    --clr-bg-secondary: var(--clr-bg-secondary__pancake);
+    --clr-bg-accent-muted: var(--clr-bg-accent-muted__pancake);
+    --clr-text-primary-200: var(--clr-text-primary-200__pancake);
+    --clr-text-primary-300: var(--clr-text-primary-300__pancake);
+    --clr-text-primary-500: var(--clr-text-primary-500__pancake);
+    --clr-text-accent: var(--clr-text-accent__pancake);
+    --clr-text-danger: var(--clr-text-danger__pancake);
+    --clr-bg-highlight: var(--clr-bg-highlight__pancake)
+}
+html[data-theme='barbie'] {
+    --clr-bg-primary: var(--clr-bg-primary__barbie);
+    --clr-bg-primary-highlight: var(--clr-bg-primary-highlight__barbie);
+    --clr-bg-secondary: var(--clr-bg-secondary__barbie);
+    --clr-bg-accent-muted: var(--clr-bg-accent-muted__barbie);
+    --clr-text-primary-200: var(--clr-text-primary-200__barbie);
+    --clr-text-primary-300: var(--clr-text-primary-300__barbie);
+    --clr-text-primary-500: var(--clr-text-primary-500__barbie);
+    --clr-text-accent: var(--clr-text-accent__barbie);
+    --clr-text-danger: var(--clr-text-danger__barbie);
+    --clr-bg-highlight: var(--clr-bg-highlight__barbie)
+}
+html[data-theme='darcula'] {
+    --clr-bg-primary: var(--clr-bg-primary__darcula);
+    --clr-bg-primary-highlight: var(--clr-bg-primary-highlight__darcula);
+    --clr-bg-secondary: var(--clr-bg-secondary__darcula);
+    --clr-bg-accent-muted: var(--clr-bg-accent-muted__darcula);
+    --clr-text-primary-200: var(--clr-text-primary-200__darcula);
+    --clr-text-primary-300: var(--clr-text-primary-300__darcula);
+    --clr-text-primary-500: var(--clr-text-primary-500__darcula);
+    --clr-text-accent: var(--clr-text-accent__darcula);
+    --clr-text-danger: var(--clr-text-danger__darcula);
+    --clr-bg-highlight: var(--clr-bg-highlight__darcula)
+}
+
+body {
+    background-color: var(--clr-bg-primary);
+    background-image: radial-gradient(600px at 750px 274px, var(--clr-bg-highlight), transparent 80%)
+}
+
+h1 {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl;
+    color: var(--clr-text-primary-200)
+}
+
+h2 {
+    @apply text-lg font-medium tracking-tight sm:text-xl;
+    color: var(--clr-text-primary-200)
+}
+
+h4 {
+    @apply text-base font-medium;
+    color: var(--clr-text-primary-300)
+}
+
+p {
+    @apply leading-normal;
+    color: var(--clr-text-primary-500)
+}
+
+.container {
+    @apply w-[min(90%,_1200px)] mx-auto
+}

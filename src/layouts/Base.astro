@@ -1,0 +1,21 @@
+---
+import { DEFAULT_THEME } from '@stores/theme';
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} data-theme={DEFAULT_THEME}>
+  <head>
+    <slot name='meta' />
+    <slot name='title' />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+@stores/theme/theme

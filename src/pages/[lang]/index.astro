@@ -1,0 +1,89 @@
+---
+import MainLayout from '@layouts/Main.astro';
+
+import Themes from '@components/solid/Theme';
+
+import Globe from '@components/icons/Globe.astro';
+import Github from '@components/icons/Github.astro';
+import LinkedIn from '@components/icons/LinkedIn.astro';
+
+import { translations as EnglishTranslations } from '@locale/en';
+import { translations as ItalianTranslations } from '@locale/it';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' }, props: { translations: EnglishTranslations } },
+    { params: { lang: 'it' }, props: { translations: ItalianTranslations } },
+  ];
+}
+
+const { lang } = Astro.params;
+const { translations } = Astro.props;
+
+const changeLanguageLink = lang === 'it' ? '/en' : '/it';
+---
+
+<MainLayout lang={lang} title='Home'>
+  <header class='container'>
+    <nav class='py-4 ml-auto relative max-w-fit flex gap-4 items-center'>
+      <span class='sr-only'>Select theme</span>
+      <Themes client:only text={translations.utils.theme} />
+      <span class='sr-only'>Change language</span>
+      <a
+        href={changeLanguageLink}
+        aria-label='go to new language page, supported italian and english'
+      >
+        <Globe
+          class='text-primary-500'
+          width={21}
+          height={21}
+          aria-hidden='true'
+        />
+      </a>
+    </nav>
+  </header>
+  <main
+    class='min-h-[calc(100vh_-_4rem)] container flex flex-col gap-8 items-center justify-center'
+  >
+    <h1>{translations.greeting}</h1>
+    <h2>{translations.subheader}</h2>
+    <ul id='contacts' aria-label='contacts' class='text-center'>
+      <p class='mb-4'>{translations.contact_me}</p>
+      <li>
+        <h4 class='sr-only'>Email</h4>
+        <a
+          aria-label='Email address link (open in email provider)'
+          href='mailto:marco.montepeloso@itsmemarco.dev'
+          class='text-primary-200 hover:text-accent focus:text-accent transition-color'
+          >marco.montepeloso@itsmemarco.dev</a
+        >
+      </li>
+    </ul>
+    <ul aria-label='Social media' class='flex items-center'>
+      <li class='mr-5 text-xs shrink-0 text-primary-500'>
+        <a
+          class='block hover:text-primary-200'
+          href='https://github.com/BeGeos'
+          target='_blank'
+          rel='noreferrer noopener'
+          aria-label='GitHub (opens in a new tab)'
+          title='GitHub'
+          ><span class='sr-only'>GitHub</span>
+          <Github class='h-6 w-6' />
+        </a>
+      </li>
+      <li class='mr-5 text-xs shrink-0 text-primary-500'>
+        <a
+          class='block hover:text-primary-200'
+          href='https://linkedin.com/in/marco-montepeloso-dev'
+          target='_blank'
+          rel='noreferrer noopener'
+          aria-label='LinkedIn (opens in a new tab)'
+          title='LinkedIn'
+          ><span class='sr-only'>LinkedIn</span>
+          <LinkedIn class='h-6 w-6' /></a
+        >
+      </li>
+    </ul>
+  </main>
+</MainLayout>
