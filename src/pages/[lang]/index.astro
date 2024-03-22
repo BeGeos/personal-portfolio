@@ -23,7 +23,11 @@ const { translations } = Astro.props;
 const changeLanguageLink = lang === 'it' ? '/en' : '/it';
 ---
 
-<MainLayout lang={lang} title='Home'>
+<MainLayout
+  lang={lang}
+  title='Home'
+  description={translations.meta.description}
+>
   <header class='container'>
     <nav class='py-4 ml-auto relative max-w-fit flex gap-4 items-center'>
       <span class='sr-only'>Select theme</span>

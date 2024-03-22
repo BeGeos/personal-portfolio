@@ -8,13 +8,14 @@ import '../app.css';
 interface Props {
   title: string;
   lang: string;
+  description: string;
 }
 
-const { title, lang = 'en' } = Astro.props;
+const { title, description, lang = 'en' } = Astro.props;
 ---
 
 <Base lang={lang}>
-  <Meta slot='meta' />
+  <Meta slot='meta' title={title} description={description} />
   <Title slot='title' title={title} />
   <slot />
 </Base>
